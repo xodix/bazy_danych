@@ -18,12 +18,19 @@ CREATE TABLE `firma_2`.`magazyn` (
 	`liczba_sztuk` INT NOT NULL,
 	PRIMARY KEY (`id_towaru`)
 );
--- @block tworzenie_urzytkownikow
+-- @block tworzenie_użytkownikow
 CREATE User `kadrowa`;
 CREATE User `ksiegowa`;
 CREATE USER `magazynier`;
 CREATE USER `informatyk`;
 CREATE USER `prezes`;
--- @block nadawanie_uprawnien
-Grant All ON firma_2.pracownicy TO `kadrowa`;
-GRANT SELECT on firma_2.place to `kadrowa`;
+-- @block nadawanie_uprawnień
+Grant ALL ON firma_2.pracownicy TO `kadrowa`;
+GRANT SELECT on firma_2.place TO `kadrowa`;
+GRANT SELECT ON firma_2.pracownicy TO `ksiegowa`;
+GRANT ALL ON firma_2.place TO `ksiegowa`;
+GRANT SELECT ON firma_2.magazyn TO `ksiegowa`;
+GRANT ALL ON firma_2.magazyn TO `magazynier`;
+Grant ALL ON firma_2.* TO `informatyk` WITH
+GRANT OPTION;
+GRANT SELECT ON firma_2.* TO `prezes`;

@@ -1,0 +1,4 @@
+handlowiec1: ""
+handlowiec2: ""
+informatyk: ""
+prezes: ""

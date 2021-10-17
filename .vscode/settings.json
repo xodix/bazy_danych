@@ -13,6 +13,19 @@
 			"database": "ankiety",
 			"username": "root",
 			"password": ""
+		},
+		{
+			"mysqlOptions": {
+				"authProtocol": "default"
+			},
+			"previewLimit": 50,
+			"server": "localhost",
+			"port": 3306,
+			"driver": "MySQL",
+			"name": "sklep_2",
+			"database": "sklep_2",
+			"username": "root",
+			"password": ""
 		}
 	]
 }
